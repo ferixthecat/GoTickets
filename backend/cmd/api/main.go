@@ -7,6 +7,8 @@ import (
 )
 
 func main() {
+	// envConfig := config.NewEnvConfig()
+
 	app := fiber.New(fiber.Config{
 		AppName:      "TicketBooking",
 		ServerHeader: "Fiber",
