@@ -1,13 +1,18 @@
 package main
 
 import (
+	"fmt"
+
+	"github.com/ferixthecat/bookingapp/config"
+	"github.com/ferixthecat/bookingapp/db"
 	"github.com/ferixthecat/bookingapp/handlers"
 	"github.com/ferixthecat/bookingapp/repositories"
 	"github.com/gofiber/fiber/v2"
 )
 
 func main() {
-	// envConfig := config.NewEnvConfig()
+	envConfig := config.NewEnvConfig()
+	db := db.Init(envConfig, db.DBMigrator)
 
 	app := fiber.New(fiber.Config{
 		AppName:      "TicketBooking",
@@ -15,7 +20,7 @@ func main() {
 	})
 
 	// Repositories
-	eventRepository := repositories.NewEventRepository(nil)
+	eventRepository := repositories.NewEventRepository(db)
 
 	// Routing
 	server := app.Group("/api")
@@ -23,5 +28,5 @@ func main() {
 	// Handlers
 	handlers.NewEventHandler(server.Group("/event"), eventRepository)
 
-	app.Listen(":3000")
+	app.Listen(fmt.Sprintf(":" + envConfig.ServerPort))
 }
