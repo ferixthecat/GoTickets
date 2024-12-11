@@ -1,6 +1,6 @@
 # GoTickets
 
-GoTickets is a ticket booking application built using modern technologies, including **Go**, **TypeScript**, **Expo**, and **React-Native**. This project demonstrates seamless integration of backend and frontend technologies to create an efficient and user-friendly platform for booking tickets to events, shows, and more.
+GoTickets is a ticket booking application built using **Go**, **TypeScript**, **Expo**, and **React-Native**. This project demonstrates seamless integration of backend and frontend technologies to create an efficient and user-friendly platform for booking tickets to events, shows, and more.
 
 ---
 
@@ -17,12 +17,12 @@ GoTickets is a ticket booking application built using modern technologies, inclu
 ## Tech Stack
 
 ### Frontend
-- **React Native**: For cross-platform mobile development.
-- **Expo**: Simplifies app development and testing.
-- **TypeScript**: Adds type safety to JavaScript for better code quality.
+- **React Native**
+- **Expo**
+- **TypeScript**
 
 ### Backend
-- **Go**: A powerful, efficient, and scalable programming language for server-side development.
+- **Go**
 
 ---
 
